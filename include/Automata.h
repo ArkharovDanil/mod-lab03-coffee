@@ -2,15 +2,10 @@
 #pragma once
 #include <iostream>
 #include <string>
-
 enum STATES { OFF, WAIT, ACCEPT, CHECK, COOK };
-
 using std::string;
-
-class Automata {
-    
+class Automata {   
 public:
-    
     STATES state;
     int money;
     const string menu[9] = {
@@ -28,9 +23,7 @@ public:
     const int prices[9] = {
         10, 20, 30, 40, 50, 60, 70, 80, 90,
     };
-
-public:
-    
+public:   
     Automata();
     void on();
     void off();
