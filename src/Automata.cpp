@@ -41,9 +41,8 @@ void Automata::coin(int coins) {
     }
 }
 void Automata::getMenu() {
-    for (int i = 0; i++; i < 9)
-    {
-        cout <<i+1<<menu[i]<<endl;
+    for (int i = 0; i++; i < 9){
+        cout << i+1 << menu[i] << endl;
     }
 }
 
@@ -67,12 +66,12 @@ void Automata::getState() {
     }
 }
 void Automata::choice(int choosenOne) {
-    if(state == ACCEPT) {
+    if (state == ACCEPT) {
         if (sizeof(menu) < choosenOne || choosenOne <= 0) {
             error();
         }
         state = CHECK;
-        choiseCustomer =choosenOne;
+        choiseCustomer = choosenOne;
         cout << "Your choice is " << menu[choiseCustomer - 1] << endl;
         getState();
     } else {
