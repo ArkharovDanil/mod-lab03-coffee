@@ -5,8 +5,7 @@
 enum STATES { OFF, WAIT, ACCEPT, CHECK, COOK };
 using std::string;
 class Automata {
-    
-public:
+    public:
     STATES state;
     int money;
     const string menu[9] = {
@@ -23,9 +22,8 @@ public:
     int choiseCustomer;
     const int prices[9] = {
         10, 20, 30, 40, 50, 60, 70, 80, 90,
-    };
-    
-public:   
+    }; 
+ public:   
     Automata();
     void on();
     void off();
