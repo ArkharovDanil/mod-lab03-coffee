@@ -88,6 +88,7 @@ bool Automata::check() {
         return false;
     } else {
         error();
+        return false;
     }
 }
 int Automata::whereIsMyMoney() {
