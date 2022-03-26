@@ -4,7 +4,8 @@
 #include <string>
 enum STATES { OFF, WAIT, ACCEPT, CHECK, COOK };
 using std::string;
-class Automata {   
+class Automata {
+    
 public:
     STATES state;
     int money;
@@ -23,6 +24,7 @@ public:
     const int prices[9] = {
         10, 20, 30, 40, 50, 60, 70, 80, 90,
     };
+    
 public:   
     Automata();
     void on();
