@@ -42,7 +42,7 @@ void Automata::coin(int coins) {
     }
 }
 void Automata::getMenu() {
-    for (int i = 0; i++; i < 9){
+    for (int i = 0; i++; i < 9) {
         cout << i+1 << menu[i] << endl;
     }
 }
