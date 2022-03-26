@@ -8,8 +8,6 @@ Automata::Automata() {
     choiseCustomer = 0;
     getState();
 }
-
-
 void Automata::on() {
     if (state == OFF) {
         cout << "Hi,mate" << endl;
@@ -19,9 +17,8 @@ void Automata::on() {
 }
     else {
         error();
-    }   
+    }
 }
-
 void Automata::off() {
     if (state == WAIT) {
         cout << "Good bye" << endl;
@@ -31,7 +28,6 @@ void Automata::off() {
         error();
     }
 }
-
 void Automata::coin(int coins) {
     if (state == WAIT) {
         state = ACCEPT;
@@ -45,16 +41,14 @@ void Automata::coin(int coins) {
         }
         else {
             error();
-        }             
+        }
     }
 }
-
 void Automata::getMenu() {
     for (int i = 0; i++; i < 9)
     {
         cout <<i+1<<menu[i]<<endl;
     }
-   
 }
 
 void Automata::getState() {
@@ -75,9 +69,7 @@ void Automata::getState() {
         cout << "I think all is gonna good" << endl;
         break;
     }
-    
 }
-
 void Automata::choice(int choosenOne) {
     if(state == ACCEPT) {
         if (sizeof(menu) < choosenOne || choosenOne <= 0) {
@@ -91,9 +83,7 @@ void Automata::choice(int choosenOne) {
     else {
         error();
     }
-    
 }
-
 bool Automata::check() {
     if (state == CHECK) {
         if (money >= prices[choiseCustomer]) {
@@ -105,13 +95,11 @@ bool Automata::check() {
     else {
         error();
     }
-    
 }
 int Automata::whereIsMyMoney() {
     cout << "Your cash is " << money << endl;
     return money;
 }
-
 void Automata::cancel() {
     if (state == ACCEPT || state == CHECK) {
         state = WAIT;
@@ -122,9 +110,7 @@ void Automata::cancel() {
     else {
         error();
     }
-   
 }
-
 void Automata::cook() {
     if (state == CHECK) {
         state = COOK;
@@ -135,9 +121,7 @@ void Automata::cook() {
     else {
         error();
     }
-
 }
-
 void Automata::finish() {
         if (state == COOK) {
             state = WAIT;
@@ -147,7 +131,6 @@ void Automata::finish() {
         else {
             error();
         }
-   
     }
 void Automata::error() {
 cout << "u did some wrong things " << endl;
