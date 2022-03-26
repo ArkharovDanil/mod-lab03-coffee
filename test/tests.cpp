@@ -39,5 +39,4 @@ TEST(test3, incorrect_operation) {
     catch (domain_error& err) {
         ASSERT_STREQ("Error! Incorrect operation.", err.what());
     }
-
 }
