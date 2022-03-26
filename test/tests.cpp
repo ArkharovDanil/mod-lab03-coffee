@@ -31,10 +31,10 @@ TEST(test2, incorrect_operation) {
 }
 
 TEST(test3, incorrect_operation) {
-    Automata drinking_machine;
-    drinking_machine.state = OFF;
+    Automata ak47;
+    ak47.state = OFF;
     try {
-        drinking_machine.coin(100);
+        ak47.coin(100);
     }
     catch (domain_error& err) {
         ASSERT_STREQ("Error! Incorrect operation.", err.what());
