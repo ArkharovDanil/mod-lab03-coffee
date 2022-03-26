@@ -10,8 +10,7 @@ int main() {
     if (ak47.check()) {
         ak47.cook();
         ak47.finish();
-    }
-    else {
+    } else {
         ak47.cancel();
     }
     ak47.off();
