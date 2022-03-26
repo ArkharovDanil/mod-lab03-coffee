@@ -14,8 +14,7 @@ void Automata::on() {
         state = WAIT;
         getMenu();
         getState();
-}
-    else {
+} else {
         error();
     }
 }
@@ -23,8 +22,7 @@ void Automata::off() {
     if (state == WAIT) {
         cout << "Good bye" << endl;
         state = OFF;
-    }
-    else {
+    } else {
         error();
     }
 }
@@ -33,13 +31,11 @@ void Automata::coin(int coins) {
         state = ACCEPT;
         money += coins;
         cout << "Thank u for Donation, go ahead" << endl;
-    }
-    else {
+    } else {
         if (state == ACCEPT) {
             money += coins;
             cout << "Thank u for Donation, go ahead" << endl;
-        }
-        else {
+        } else {
             error();
         }
     }
@@ -79,8 +75,7 @@ void Automata::choice(int choosenOne) {
         choiseCustomer =choosenOne;
         cout << "Your choice is " << menu[choiseCustomer - 1] << endl;
         getState();
-    }
-    else {
+    } else {
         error();
     }
 }
@@ -91,8 +86,7 @@ bool Automata::check() {
         }
         getState();
         return false;
-    }
-    else {
+    } else {
         error();
     }
 }
@@ -106,8 +100,7 @@ void Automata::cancel() {
         cout << "Give me more than i have now" << endl;
         whereIsMyMoney();
         getState();
-    }
-    else {
+    } else {
         error();
     }
 }
@@ -117,8 +110,7 @@ void Automata::cook() {
         money -= prices[choiseCustomer];
         whereIsMyMoney();
         getState();
-    }
-    else {
+    } else {
         error();
     }
 }
@@ -127,8 +119,7 @@ void Automata::finish() {
             state = WAIT;
             whereIsMyMoney();
             getState();
-        }
-        else {
+        } else {
             error();
         }
     }
